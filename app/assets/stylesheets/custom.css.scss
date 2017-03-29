@@ -1,0 +1,55 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+//Navigation Bar CSS inside (navigationsBar/ navigation)
+
+#logostyle{
+  width:30px;
+  height:30px;
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+// findwrestaurant css ( restaurants / findnewrestaurant.html.erb)
+.jumbotron{
+  width:90%;
+  height:300px;
+  margin-left:65px;
+}
+
+// All center class css
+.center{
+  text-align: center;
+}
+
+// all col-center css
+.col-center{
+  margin: 0;
+}
+
+// Sign in css ( devise/ sessions / new.html.erb)
+.page-title{
+  text-align: center;
+}
+
+.box-container{
+  width: 20em;
+}
+
+.command{
+  text-align: center;
+}
+
+//Carousel slide (views/resturants/show.html.erb
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 70%;
+  margin: auto;
+}
+
+.container #myCarousel .carousel-inner img{
+  width: 500px;
+  height: 400px;
+}
+
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Yelpclone</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= render 'navigationsBar/navigation'%>
+    <!-- Starting of flash each do-->
+    <div class = "container">
+    <% flash.each do |key,value| %>
+      <div class ="alert alert<%= key %>">
+        <a href="#" data-dismiss="alert" class="close">x</a>
+        <ul>
+          <li>
+            <%= value %>
+          </li>
+        </ul>
+      </div> <!-- Ending of flash each do-->
+    <%end %>
+    </div>
+    <%= yield %>
+
+  <script>
+    $('.star-rating').raty({
+        path: '/assets',
+        readOnly: true,
+        score: function (){
+            return $(this).attr('data-score');
+        }
+    });
+  </script>
+  </body>
+</html>

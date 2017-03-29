@@ -1,0 +1,16 @@
+<div class="container">
+  <table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+  <% @resturants.each do |resturant| %>
+      <tr>
+        <% name = resturant.name %>
+        <td><%= link_to resturant, resturant_path(resturant)%></td>
+      </tr>
+  <% end %>
+
+  </table>
+
+</div>
