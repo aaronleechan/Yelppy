@@ -18,23 +18,30 @@
         &nbsp &nbsp &nbsp
         <%= link_to "Sign out", destroy_user_session_path,method: :delete %>
       <%end%>
-
       </ul>
     </div>
 
 
     <h1> Find a restaurant </h1>
 
-    <form>
+
       <div id="locationfinder" class="col-lg-8 col-lg-offset-2">
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search Location ">
-          <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Go!</button>
-      </span>
+        <center>
+        <div class="search-form">
+          <%= form_tag search_resturants_path, method: :get do |f| %>
+              <%= text_field_tag :search,nil, placeholder: "pizza, bugers, etc" %>
+              &nbsp&nbsp&nbsp
+              <%= text_field_tag :location,nil, placeholder: "San Jose, San Francisco, etc" %>
+              <br \><br \>
+              <%= select_tag :category, options_for_select(Category.all.map{ |c| [c.name, c.id]}) %>
+              <br \><br \>
+              <%= submit_tag 'Search', class: "btn span2 btn-realto-form btn-large" %>
+          <% end %>
         </div><!-- /input-group -->
+        </center>
       </div><!-- /.col-lg-6 -->
-    </form>
+
+
 
   </div>
 </div>

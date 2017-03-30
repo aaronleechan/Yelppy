@@ -7,7 +7,7 @@
   <% @resturants.each do |resturant| %>
       <tr>
         <% name = resturant.name %>
-        <td><%= link_to resturant, resturant_path(resturant)%></td>
+        <td><%= link_to resturant.name, resturant_path(resturant)%></td>
       </tr>
   <% end %>
 
