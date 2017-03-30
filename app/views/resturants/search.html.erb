@@ -10,7 +10,11 @@
                 <div class="holder">
                   <a class="overlay" href="#" title="Property title">
                     <span class="more"></span>
-                    <img alt="image" class="media-object" src="http://placehold.it/370X210">
+                    <% if resturant.image.url.present? %>
+                    <%= link_to image_tag(resturant.image_url.to_s, :size=>"370x210"), resturant %>
+                    <% else %>
+                    <%= link_to image_tag("http://placehold.it/370x210"), resturant %>
+                    <% end %>
                   </a>
                   <span class="prop-tag"></span>
                   <div class="prop-info">

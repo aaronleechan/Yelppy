@@ -11,7 +11,9 @@
       <div class="clearfix">
       <div class="clearfix padding30">
 
-        <%= image_tag @resturant.image_url %>
+        <% if @resturant.image_url present? %>
+        <%= image_tag(@resturant.image_url, :size=>"500x300") %>
+        <% end %>
 
         <h2 class="prop-title pull-left margin0"><%=@resturant.name %></h2>
         <h2><span class="rating-value pull-right margin0 star-rating" data-score=<%= @avg_rating %>></span></h2>
