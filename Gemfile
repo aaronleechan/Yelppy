@@ -24,7 +24,7 @@ gem 'coffee-rails', '~> 4.2'
 
 #google api
 gem 'google-api-client', '~> 0.9'
-
+gem 'geocoder'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
