@@ -1,4 +1,32 @@
-<h1> This is all list of resturants!!!!</h1>
-<% @resturants.each do |resturant| %>
-    <%= resturant.name %>
-<% end %>
+<div class ="container">
+  <div class="row">
+    <div class="span12">
+      <div class="row">
+        <% if @resturants.blank? %>
+            <h3>Could not find a restaurant</h3>
+        <%else%>
+            <% @resturants.each do |resturant| %>
+              <div class="span4 box-container">
+                <div class="holder">
+                  <a class="overlay" href="#" title="Property title">
+                    <span class="more"></span>
+                    <img alt="image" class="media-object" src="http://placehold.it/370X210">
+                  </a>
+                  <span class="prop-tag"></span>
+                  <div class="prop-info">
+                    <h3 class="prop-title"><%= link_to resturant.name, resturant %></h3>
+                    <ul class="more-info clearfix">
+                      <li class="info-label clearfix"><span class="pull-left">Address:</span>
+                          <span class="qty pull-right"><%= resturant.address1 %></span></li>
+                      <li class="info-label clearfix"><span class="pull-left">Category:</span>
+                          <span class="qty pull-right"><%=resturant.category.name %></span></li>
+                    </ul>
+                  </div><!-- prop-info ending point -->
+                </div><!-- holder ending point -->
+                <% end %>
+                <% end %>
+              </div><!-- span4 box-container ending point -->
+      </div><!-- row ending point -->
+    </div><!-- span12 ending point -->
+  </div><!-- row ending point -->
+</div><!-- container ending point-->
