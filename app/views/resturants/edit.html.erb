@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Resturant</title>
+</head>
+<body>
+
+<div class ='container' id='formContainer'>
+  <div class ='row'>
+    <div class ='col-sm-6'>
+
+      <%= form_for @resturant do |f| %>
+
+
+          <!-- User Name -->
+          <div class ="form-group">
+
+            <div class="control-label col-sm-2">
+              <%= f.label :name %>
+            </div>
+
+            <div class= ="col-sm-4">
+              <%= f.text_field :name, class: "form-control", placeholder: "Name", autofocus: true%>
+            </div>
+          </div>
+
+          <!-- Description -->
+          <div class ="form-group">
+            <div class="control-label col-sm-2">
+              <%= f.label :description %>
+            </div>
+
+            <div class= ="col-sm-4">
+              <%= f.text_area :description, class: "form-control", placeholder: "Description", autofocus: true%>
+            </div>
+          </div>
+
+          <!-- Address 1  -->
+          <div class ="form-group">
+
+            <div class="control-label col-sm-2">
+              <%= f.label :address1 %>
+            </div>
+
+            <div class= ="col-sm-4">
+              <%= f.text_field :address1, class: "form-control", placeholder: "Address", autofocus: true%>
+            </div>
+          </div>
+
+          <!-- Address 2 -->
+          <div class ="form-group">
+
+            <div class="control-label col-sm-2">
+              <%= f.label :address2 %>
+            </div>
+
+            <div class= ="col-sm-4">
+              <%= f.text_field :address2, class: "form-control", placeholder: "Address", autofocus: true%>
+            </div>
+          </div>
+
+          <!-- City -->
+          <div class ="form-group">
+
+            <div class="control-label col-sm-2">
+              <%= f.label :city %>
+            </div>
+
+            <div class= ="col-sm-4">
+              <%= f.text_field :city, class: "form-control", placeholder: "City", autofocus: true%>
+            </div>
+          </div>
+
+          <!-- State -->
+          <div class ="form-group">
+
+            <div class="control-label col-sm-2">
+              <%= f.label :state %>
+            </div>
+
+            <div class= ="col-sm-4">
+              <%= f.text_field :state, class: "form-control", placeholder: "State", autofocus: true%>
+            </div>
+          </div>
+
+          <!-- ZipCode -->
+          <div class ="form-group">
+
+            <div class="control-label col-sm-2">
+              <%= f.label :zipcode %>
+            </div>
+
+            <div class= ="col-sm-4">
+              <%= f.text_field :zipcode, class: "form-control", placeholder: "Zip Code", autofocus: true%>
+            </div>
+          </div>
+
+          <!-- Phone -->
+          <div class ="form-group">
+
+            <div class="control-label col-sm-2">
+              <%= f.label :phone %>
+            </div>
+
+            <div class= ="col-sm-4">
+              <%= f.text_field :phone, class: "form-control", placeholder: "Phone", autofocus: true%>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class ="form-group">
+
+            <div class="control-label col-sm-2">
+              <%= f.label :email %>
+            </div>
+
+            <br \>
+
+            <div class= ="col-sm-4">
+              <%= f.text_field :email, class: "form-control", placeholder: "email", autofocus: true%>
+            </div>
+          </div>
+
+          <!-- Category  -->
+          <div class ="form-group">
+            <div class="control-label col-sm-2">
+              <%= f.label :category %>
+            </div>
+
+            <!-- Image Uploader -->
+            <div class ="form-group">
+              <div class="control-label col-sm-2">
+                <%= f.label :image %>
+              </div>
+              <div class= ="col-sm-4">
+                <%= f.file_field :image%>
+              </div>
+            </div>
+
+            <div class= ="col-sm-4">
+              <%= f.select :category_id,Category.all.map{ |f| [f.name, f.id]}, class: "form-control", autofocus:true %>
+            </div>
+          </div>
+          <br \>
+
+          <!-- Submit -->
+          <div class ="form-group">
+            <div class ="col-sm-6">
+              <%=f.submit%>
+            </div>
+          </div>
+
+      <% end %>
+
+    </div> <!-- Ending class col-xs-8 -->
+
+  </div> <!-- Ending of ROW -->
+</div> <!-- Ending of Container -->
+
+</body>
+</html>
+
+
+
