@@ -3,8 +3,10 @@ class ResturantsController < ApplicationController
 	before_action :is_admin?, only: [:edit, :update, :destroy]
 
 	def index
-		visitor_latitude = request.location.latitude
-		visitor_longitude = request.location.longitude
+		visitor_latitude = 37.35138
+		visitor_longitude = -121.850291
+		#visitor_latitude = request.location.latitude
+		#visitor_longitude = request.location.longitude
 		@resturant = Resturant.near([visitor_latitude,visitor_longitude],20)
 		#@resturants = Resturant.all
 	end
@@ -14,13 +16,15 @@ class ResturantsController < ApplicationController
 	end
 
 	def create
-		@resturant = Resturant.new(resturant_params)
-		if @resturant.save
-				redirect_to @resturant
-		else
-			flash[:danger] = @resturant.errors.full_messages.to_sentence
-			render 'new'
-		end
+
+			@resturant = Resturant.new(resturant_params)
+			if @resturant.save
+					redirect_to @resturant
+			else
+				flash[:danger] = @resturant.errors.full_messages.to_sentence
+				render 'new'
+			end
+
 	end
 
 	def edit
