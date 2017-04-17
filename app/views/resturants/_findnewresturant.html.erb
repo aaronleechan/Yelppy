@@ -17,6 +17,9 @@
         <%= link_to "Edit Profile", edit_user_registration_path %>
         &nbsp &nbsp &nbsp
         <%= link_to "Sign out", destroy_user_session_path,method: :delete %>
+	      &nbsp &nbsp &nbsp
+	      <% @temp_user = current_user %>
+        <%= link_to "Profile",  @temp_user.show()%>
       <%end%>
       </ul>
     </div>
