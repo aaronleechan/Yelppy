@@ -7,8 +7,5 @@ class User < ApplicationRecord
   has_many :reviews
 
 
-  def show
-  	#render action: "profile"
-  end	
 
 end
