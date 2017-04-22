@@ -1,1 +1,33 @@
-<div> This is the profile </div>
+<div class="container">
+
+  <h2>Restaurants You Reviewed </h2>
+
+</div>
+<div class ="container page-content">
+  <div class="row">
+    <% if @my_review_resturant.blank? %>
+        <h3>Could not find a restaurant</h3>
+    <%else%>
+        <% @my_review_resturant.each do |resturant| %>
+            <div class="col-md-4">
+              <a class="overlay" href="#" title="Property title">
+                <span class="more"></span>
+                <% if resturant.image.url.present? %>
+                    <%= link_to image_tag(resturant.image_url.to_s, :size=>"370x210"), resturant %>
+                <% else %>
+                    <%= link_to image_tag("http://placehold.it/370x210"), resturant %>
+                <% end %>
+              </a>
+              <span class="prop-tag"></span>
+              <div class="prop-info">
+                <h3 class="prop-title"><%= link_to resturant.name, resturant %></h3>
+                <ul class="more-info clearfix">
+                  <li class="info-label clearfix"><span class="pull-left">Address:</span>
+                    <span class="qty pull-right"><%= resturant.address1 %></span></li>
+                </ul>
+              </div><!-- prop-info ending point -->
+            </div><!-- holder ending point -->
+        <% end %>
+    <% end %>
+  </div><!-- row ending point -->
+</div><!-- container ending point-->

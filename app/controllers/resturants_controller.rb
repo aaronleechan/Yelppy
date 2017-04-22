@@ -20,10 +20,10 @@ class ResturantsController < ApplicationController
 		#only checking whether a restaurant with the phone exists or not
 		@existing_rest = Resturant.where(:phone => params[:phone])
 
-		if !(@existing_rest.nil?)	
+		if !(@existing_rest.first.nil?)	
 			#if it does, show this error and redirect to home page
 			flash[:danger] = "This restaurant is already in the database"
-			redirect_to new_resturant_url
+			redirect_to @existing_rest.first
 		else
 
 			@resturant = Resturant.new(resturant_params)
