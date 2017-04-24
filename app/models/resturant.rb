@@ -7,6 +7,7 @@ class Resturant < ActiveRecord::Base
   validates_presence_of :city
   validates_presence_of :state
   validates_presence_of :zipcode
+  validates_presence_of :phone
 
   geocoded_by :full_address
   after_validation :geocode
