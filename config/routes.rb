@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   match '/about_us', to: 'pages#about_us',      via: :get
   match '/contact_us', to: 'pages#contact_us',  via: :get
 
+  #---#
+  match '/profile', to: 'users#show_profile',   via: :get
 end
