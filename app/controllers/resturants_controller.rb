@@ -20,11 +20,11 @@ class ResturantsController < ApplicationController
 		#only checking whether a restaurant with the phone exists or not
 		@existing_rest = Resturant.where(:phone => params[:phone])
 
-		if !(@existing_rest.nil?)	
-			#if it does, show this error and redirect to home page
-			flash[:danger] = "This restaurant is already in the database"
-			redirect_to new_resturant_url
-		else
+		# if !(@existing_rest.nil?)
+		# 	#if it does, show this error and redirect to home page
+		# 	flash[:danger] = "This restaurant is already in the database"
+		# 	redirect_to new_resturant_url
+		# else
 
 			@resturant = Resturant.new(resturant_params)
 			if @resturant.save
@@ -33,7 +33,7 @@ class ResturantsController < ApplicationController
 				flash[:danger] = @resturant.errors.full_messages.to_sentence
 				render 'new'
 			end
-		end
+		# end
 	end
 
 	def edit
@@ -69,7 +69,7 @@ class ResturantsController < ApplicationController
 	private
 	def resturant_params
 		params.require(:resturant).permit(:name,  :description, :category_id, :address1, :address2, :city,
-																			:image, :state, :zipcode, :phone, :email);
+																			:image, :state, :zipcode, :phone, :email, :price_range);
 	end
 
 	def is_admin?

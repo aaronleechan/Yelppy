@@ -8,6 +8,8 @@ class Resturant < ActiveRecord::Base
   validates_presence_of :state
   validates_presence_of :zipcode
 
+  validates_presence_of :price_range
+
   geocoded_by :full_address
   after_validation :geocode
 

@@ -10,7 +10,7 @@
     <%else%>
         <% @resturants.each do |resturant| %>
             <div class="col-md-4">
-              <a class="overlay" href="#" title="Property title">
+              <a class="overlay" href="resturant" title="resturant.name">
                 <span class="more"></span>
                 <% if resturant.image.url.present? %>
                     <%= link_to image_tag(resturant.image_url.to_s, :size=>"370x210"), resturant %>
