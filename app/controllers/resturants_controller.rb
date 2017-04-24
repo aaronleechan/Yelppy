@@ -18,13 +18,13 @@ class ResturantsController < ApplicationController
 	def create
 		#check whether the restuarant is already in the database or not
 		#only checking whether a restaurant with the phone exists or not
-		
-		if Resturant.where(:phone => params[:phone]).exists?	
+		@resturant = Resturant.new(resturant_params)
+		if Resturant.where(:phone => @resturant.phone).exists?	
 			#if it does, show this error and redirect to home page
 			flash[:danger] = "This restaurant is already in the database"
 			redirect_to new_resturant_path
 		else
-			@resturant = Resturant.new(resturant_params)
+			#@resturant = Resturant.new(resturant_params)
 			if @resturant.save
 					redirect_to @resturant
 			else
