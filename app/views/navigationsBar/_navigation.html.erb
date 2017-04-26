@@ -8,16 +8,17 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">
-        <img alt="Brand" id="logostyle" src="/assets/logo.png">
-      </a>
+      <!--<a class="navbar-brand" href="#">-->
+        <!--<img alt="Brand" id="logostyle" src="/assets/logo.png">-->
+      <!--</a>-->
+      <%= link_to image_tag("/assets/logo.png", :size=>"32"), root_path, class: "navbar-brand",id:"logo" %>
       <%= link_to "BestFinder", root_path, class: "navbar-brand",id:"logo" %>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav" class="navbar-form navbar-left">
-        <li><%= link_to "Look All Restaurants", resturants_path%></li>
+        <li><%= link_to "View All Restaurants", resturants_path%></li>
         <li><a href="#">Link</a></li>
       </ul>
 
