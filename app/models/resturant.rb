@@ -20,6 +20,17 @@ class Resturant < ActiveRecord::Base
     [address1,address2,city,state,zipcode].join(', ')
   end
 
+  def get_price_string
+    @price_string = ""
+
+    (1..price_range).each do |i|
+      @price_string += "$"
+    end
+
+    # return price string:
+    @price_string
+  end
+
   #Search Form
   def self.search(params)
     resturants = Resturant.where(category_id: params[:category].to_i)
