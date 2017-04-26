@@ -31,7 +31,7 @@ class ResturantsController < ApplicationController
 				flash[:danger] = @resturant.errors.full_messages.to_sentence
 				render 'new'
 			end
-		# end
+		end
 	end
 
 	def edit
