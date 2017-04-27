@@ -28,7 +28,6 @@ gem 'geocoder'
 
 #add Image Gem
 gem 'carrierwave'
-gem 'cloudinary'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
