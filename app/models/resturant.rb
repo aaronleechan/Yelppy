@@ -23,7 +23,7 @@ class Resturant < ActiveRecord::Base
   def get_price_string
     @price_string = ""
 
-    (1..price_range).each do |i|
+    (1..price_range.to_i).each do |i|
       @price_string += "$"
     end
 
