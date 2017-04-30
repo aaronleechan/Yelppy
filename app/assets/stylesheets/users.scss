@@ -1,3 +1,33 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.profile-format{
+
+}
+
+.left{
+    float: left;
+    padding: 0px 10px 0px 0px;
+    width: 400px;
+    background: #D3D3D3;
+    vertical-align: middle;
+}
+
+.middle{
+	text-align: center;
+	
+    top: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    background: #ffffff;
+    margin-bottom: -2000px;
+    padding-bottom: 2000px;
+}
+
+.right{
+    float: right;
+    background: blue;
+    padding: 0px 10px 0px 10px;
+    width: 400px;
+}

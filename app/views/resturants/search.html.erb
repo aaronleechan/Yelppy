@@ -35,6 +35,14 @@
                           <span class="qty pull-right"><%=resturant.category.name %></span></li>
                         <li class="info-label clearfix"><span class="pull-left">Price Range:</span>
                           <span class="qty pull-right"><%=resturant.get_price_string %></span></li>
+                          <%if user_signed_in?%>
+                            <li class="info-label clearfix">
+                            <span class="qty pull-left">
+                              <button type="button">
+                              <%= link_to "Add To Favorites", add_favorites_path(:fav_resturant_id => resturant.id.to_i)%>
+                              </button>
+                            </span></li>
+                          <%end%>
                       </ul>
                     </div><!-- prop-info ending point -->
                   </div><!-- holder ending point -->

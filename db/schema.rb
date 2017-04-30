@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170331194821) do
+ActiveRecord::Schema.define(version: 20170429065057) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.integer  "fav_resturant_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.integer  "user_id"
   end
 
   create_table "resturants", force: :cascade do |t|
@@ -30,6 +37,7 @@ ActiveRecord::Schema.define(version: 20170331194821) do
     t.float   "latitude"
     t.float   "longitude"
     t.string  "image"
+    t.integer "price_range"
     t.index ["category_id"], name: "index_resturants_on_category_id"
   end
 

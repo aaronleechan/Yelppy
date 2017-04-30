@@ -10,10 +10,10 @@ Rails.application.routes.draw do
     end
   end
 
-
   match '/about_us', to: 'pages#about_us',      via: :get
   match '/contact_us', to: 'pages#contact_us',  via: :get
-
   #---#
+  match '/add_favorites', to: 'users#add_to_favorites', via: :get
+  match '/create_favorite', to: 'favorites#create', via: :get
   match '/profile', to: 'users#show_profile',   via: :get
 end

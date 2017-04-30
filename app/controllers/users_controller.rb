@@ -2,7 +2,9 @@ class UsersController < ApplicationController
 
 	def show_profile
 		@my_review_resturant = Array.new
+		@my_favorites = Array.new
 		initialize_my_resturants
+		initialize_favorites
 		render action: "profile"
 	end
 
@@ -16,8 +18,24 @@ class UsersController < ApplicationController
 		end
 	end
 
-	def add_to_favorites
+	def initialize_favorites
+		my_id = current_user.id.to_i
+		t1 = Favorite.where(:user_id => my_id)
+		
+		t1.each do |fav|
+			t2 = Resturant.where(:id => fav.fav_resturant_id)
+			@my_favorites = @my_favorites + t2
+		end
+	end
 
+	def add_to_favorites
+		my_id = current_user.id.to_i
+		if user_signed_in?
+			temp = Favorite.new
+			redirect_to create_favorite_path(:fav_resturant_id => params[:fav_resturant_id], :user_id => my_id)
+		else
+			#redirect_to log_in_url, :notice=>"You must be logged in to view that page."	
+		end
 	end
 
 end
