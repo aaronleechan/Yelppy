@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20170331194821) do
     t.string  "zipcode"
     t.string  "phone"
     t.string  "email"
+    t.string  "price_range"
     t.integer "category_id"
     t.float   "latitude"
     t.float   "longitude"
