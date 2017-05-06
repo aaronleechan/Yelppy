@@ -17,6 +17,7 @@ header
 	/*border: medium dashed red;*/
 }
 		 
+<<<<<<< HEAD
 /*#leftcolumn 
 {
 	float:left; 
@@ -25,6 +26,14 @@ header
 	border: medium dashed blue;
 }*/
 
+=======
+/*#leftcolumn {float:left; 
+				 width:180px; 
+				 background-color: black;
+				 border: medium dashed blue;
+				 }*/
+				 
+>>>>>>> 0a4bb69403e9da5f4048932896903084eda354f6
 #rightcolumn 
 {   
 	margin-left: 0px;
