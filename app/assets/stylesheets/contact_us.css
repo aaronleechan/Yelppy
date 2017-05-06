@@ -1,0 +1,110 @@
+@charset "UTF-8";
+/*CSS Document*/
+
+body  
+{
+	font-family:Verdana,Tahoma,Arial,sans-serif; 
+	font-size:.9em; 
+	color: black;
+}
+
+
+header
+{
+	text-align: center;
+	background-color: teal;
+	padding: 10px 0;
+	/*border: medium dashed red;*/
+}
+		 
+/*#leftcolumn 
+{
+	float:left; 
+	width:180px; 
+	background-color: black;
+	border: medium dashed blue;
+}*/
+
+#rightcolumn 
+{   
+	margin-left: 0px;
+	background:#fff;
+	border: thin solid black;
+	background-color: silver;
+	text-align: left;
+	background-image: url(/assets/download.jpg);
+	background-position: 95% 50%;
+	background-repeat: no-repeat;
+	background-size: 800px 712.5px;
+}
+		 
+caption 
+{
+	font-size: xx-large;
+}
+
+table 
+{
+	/*width: 600px;*/
+	/*margin: 50px auto;*/
+   border: thin solid #630;
+   border-collapse: collapse;
+}
+
+
+fieldset 
+{
+	margin-left: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: solid;
+	font-size: large;
+}
+
+legend
+{
+	float: left;
+	width: 100%;
+	padding: 0;
+	font-weight: solid;
+}
+
+label
+{ 
+ 	float: left;
+	width: 100px;
+	text-align: right;
+	padding-right:20px;
+	margin-top: 10px; 
+	/*font-weight: bold;*/
+	
+}
+
+form 
+{
+	width: 600px;
+}
+
+
+input, select, textarea 
+{
+	font-weight: normal;
+	margin: 8px 15px;
+}
+
+footer 
+{
+	background-color: teal;
+	padding: 10px 0;
+	text-align: center;
+	margin: 0 auto;
+}
+
+#wrapper1 
+{
+	margin: 0 auto; 
+	width: 85%; 
+	margin-bottom: 25px;
+	/*background-color: blue;*/
+	/*border: medium dashed red;*/
+}

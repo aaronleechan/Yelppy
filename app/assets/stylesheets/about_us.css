@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/*CSS Document*/
+
+body  
+{
+	font-family:Verdana,Tahoma,Arial,sans-serif; 
+	font-size:.9em;
+	color: black;
+}
+
+header
+{
+	text-align: center;
+	background-color: silver;
+	padding: 10px 0;
+}
+
+		 
+/*#leftcolumn 
+{
+	float:left; 
+	width:0px; 
+	background-color: black;
+	border: medium dashed red;
+}*/
+				 
+#rightcolumn 
+{
+	margin-left:180px; 
+	background:#fff;
+	border: thin solid black;
+	background-color: #D2691E;
+	/*text-align: center;*/
+}
+		 
+caption 
+{
+	font-size: xx-large;
+}
+
+table 
+{
+	width: 600px;
+	margin: 5px auto;
+	border: thin solid #630;
+	border-collapse: collapse;
+}
+
+
+fieldset 
+{
+	margin-top: 20px;
+	border: solid;
+}
+
+label input 
+{
+	font-weight: normal;
+	font-weight: bold;
+}
+
+form 
+{
+	width: 600px;
+}
+
+input, select, textarea 
+{
+	margin: 8px 20px;
+}
+
+footer 
+{
+	background-color: silver;
+	padding: 0 0 0 0px;
+	text-align: center;
+}
+
+#wrapper 
+{
+	margin:0 auto; 
+	margin-bottom: 25px;
+	width: 85%; 
+	background-color: teal;
+	/*border: medium dashed red;*/
+}
