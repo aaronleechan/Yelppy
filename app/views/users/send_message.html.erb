@@ -1,0 +1,8 @@
+<h3> Send message to <%= @receiver.full_name %> </h3>
+<%= form_tag '/users/send_to_reviewer' do %>
+    <%= hidden_field_tag 'sender', @sender.email %>
+    <%= hidden_field_tag 'receiver', @receiver.email %><br />
+    <%= text_field_tag 'subject', nil, placeholder: 'Please enter subject' %><br />
+    <%= text_area_tag 'body', nil, placeholder: 'Please enter message details' %><br />
+    <%= submit_tag 'Send message' %>
+<% end %>

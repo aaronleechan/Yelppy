@@ -176,7 +176,7 @@
             <% @reviews.each do |review| %>
               <tr>
                 <td>
-                  <h5><%="#{review.user.first_name} #{review.user.last_name}" %></h5>
+                  <h5><%= link_to "#{review.user.first_name} #{review.user.last_name}",  { controller: 'users', action: 'show_profile', reviewer: review&.user&.id } %></h5>
                 </td>
                 <td>
                   <div class="clearfix star-rating" data-score=<%= review.rating %>></div>

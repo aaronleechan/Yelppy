@@ -26,6 +26,9 @@
                     <span class="qty pull-right"><%= resturant.address1 %></span></li>
                 </ul>
               </div><!-- prop-info ending point -->
+              <%- if current_user != @reviewer%>
+                <%= link_to 'send message', { controller: 'users', action: 'send_message', reviewer: @reviewer.id}, class: 'btn btn-primary' %>
+              <% end %>
             </div><!-- holder ending point -->
         <% end %>
     <% end %>
