@@ -33,25 +33,25 @@
 
 <div id="rightcolumn">
 
-<<<<<<< HEAD
-<form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycby0su8hyuXq-BYvGdzF9ogvwx0yVXIZkAZJhkJkcO0I6I3NpXY/exec">  
-<input type="hidden" name="redirect" id="redirect" value="http://www.google.com"/>
 
-=======
+<form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbzYMKZbJiVPbPCOMyBsTDosldMvzTlhjcDMFmRHTkqMz_76JhOW/exec">  
+
+
+
 <form> 
->>>>>>> 0a4bb69403e9da5f4048932896903084eda354f6
+
 
 
 <fieldset><legend>IDENTITY</legend>
 
 <label for="first">First_Name: </label>
-<input type="text" name="first" id="first"/><br>
+<input type="text" name="first" id="first" required placeholder="First"/><br>
 
 <label for="last">Last_Name: </label>
-<input type="text" name="last" id="last"/><br>
+<input type="text" name="last" id="last" required placeholder="Last"/><br>
 
 <label for="email">Email: </label>
-<input type="text" name="email" id="email"/><br>
+<input type="email" name="email" id="email" required placeholder="your.email@Xmail.com"/><br>
 
 <label for="age">Age: </label>
 <input type="text" name="age" id="age"/><br>
@@ -106,6 +106,18 @@ Comments:
 </footer>
 
 </div>
+
+<!-- Customise the Thankyou Message People See when they submit the form: -->
+  <div style="display:none;" id="thankyou_message">
+    <h2><em>Thanks</em> for contacting us!
+      We will get back to you soon!</h2>
+  </div>
+
+  <!-- Submit the Form to Google Using "AJAX" -->
+  <script data-cfasync="false" type="text/javascript"
+  src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+  <!-- <script data-cfasync="false" type="text/javascript"
+  src="/form-submission-handler.js"></script> -->
 
 </body>
 </html>
